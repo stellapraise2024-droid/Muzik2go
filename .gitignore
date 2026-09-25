@@ -1,0 +1,25 @@
+# Deps
+node_modules/
+.expo/
+.next/
+dist/
+build/
+
+# Env
+.env
+.env.local
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Audio / uploads (local dev)
+*.wav
+*.m4a
+uploads/
+
+# Python
+__pycache__/
+.venv/
