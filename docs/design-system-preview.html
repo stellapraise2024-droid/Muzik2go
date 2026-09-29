@@ -2,103 +2,90 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Muzik2Go — Design System (Emerald / Purple / Pink)</title>
+<title>Muzik2Go — Design System (Foil: Cyan / Orange / Chrome / Lime)</title>
 <style>
-:root{
---bg0:#0B0F14;--bg1:#111722;--s1:#161E2B;--s2:#1C2536;--border:#2A3650;
---t1:#F4F6FB;--t2:#B9C2D4;--t3:#7D8AA3;
---emerald:#10B981;--emerald-deep:#059669;--emerald-ink:#06281E;
---purple:#8B5CF6;--purple-deep:#7C3AED;--purple-ink:#1B1040;
---pink:#EC4899;--pink-deep:#DB2777;--pink-ink:#3B0A22;
---err:#FF453A;--warn:#FFB020;--wave-u:#2E3B55;
-}
+:root{--bg0:#121A26;--bg1:#1A2436;--s1:#222E44;--s2:#2A3850;--border:#3A4A66;--t1:#F2F5F9;--t2:#C7CDD6;--t3:#8A94A8;--cyan:#0AC8FF;--cyan-ink:#062A3A;--orange:#FF8A1A;--orange-ink:#3A1E02;--lime:#C8F04A;--lime-ink:#243000;--iris:#5B7CFF;--chrome:#C7CDD6;--err:#FF453A;--wave-u:#3A4A66}
 *{box-sizing:border-box;margin:0}body{background:var(--bg0);color:var(--t1);font-family:Inter,Segoe UI,system-ui,sans-serif;padding:24px;max-width:1120px;margin:auto}
 h1{font-size:28px}h2{font-size:20px;margin:36px 0 12px;padding-top:24px;border-top:1px solid var(--border)}h3{font-size:13px;color:var(--t2);margin:18px 0 8px;text-transform:uppercase;letter-spacing:.08em}
 .sub{color:var(--t2);margin:6px 0 16px}.card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .sw{width:150px;height:70px;border-radius:8px;display:flex;align-items:flex-end;padding:8px;font-size:11px;font-weight:700;border:1px solid var(--border)}
-.btn{height:48px;padding:0 20px;border-radius:8px;border:1px solid var(--border);font-weight:700;cursor:pointer;font-size:14px;background:var(--s2);color:var(--t1)}
-.b-em{background:var(--emerald);color:var(--emerald-ink);border:none}
-.b-pu{background:var(--purple);color:#fff;border:none}
-.b-pi{background:var(--pink);color:#fff;border:none}
-.b-g{background:transparent}
-.role{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px}
-.r-em{background:var(--emerald);color:var(--emerald-ink)}.r-pu{background:var(--purple);color:#fff}.r-pi{background:var(--pink);color:#fff}
+.btn{height:48px;padding:0 20px;border-radius:8px;border:1px solid var(--border);font-weight:700;font-size:14px;background:var(--s2);color:var(--t1)}
+.b-cy{background:var(--cyan);color:var(--cyan-ink);border:none}.b-ir{background:var(--iris);color:#fff;border:none}.b-or{background:var(--orange);color:var(--orange-ink);border:none}.b-g{background:transparent}
+.role{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px}.r-cy{background:var(--cyan);color:var(--cyan-ink)}.r-ir{background:var(--iris);color:#fff}.r-or{background:var(--orange);color:var(--orange-ink)}.r-li{background:var(--lime);color:var(--lime-ink)}
 .chip{display:inline-block;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid var(--border);color:var(--t2)}
-.c-em{background:var(--emerald);color:var(--emerald-ink);border:none}.c-pu{background:var(--purple);color:#fff;border:none}.c-pi{background:var(--pink);color:#fff;border:none}
-.nav{display:flex;background:var(--bg1);border:1px solid var(--border);border-radius:16px;overflow:hidden}.nav div{flex:1;text-align:center;padding:12px 4px;font-size:12px;color:var(--t3)}.nav .on{color:var(--emerald);font-weight:800}
+.c-cy{background:var(--cyan);color:var(--cyan-ink);border:none}.c-ir{background:var(--iris);color:#fff;border:none}.c-or{background:var(--orange);color:var(--orange-ink);border:none}.c-li{background:var(--lime);color:var(--lime-ink);border:none}
+.nav{display:flex;background:var(--bg1);border:1px solid var(--border);border-radius:16px;overflow:hidden}.nav div{flex:1;text-align:center;padding:12px 4px;font-size:12px;color:var(--t3)}.nav .on{color:var(--cyan);font-weight:800}
 .player{background:var(--s2);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;gap:16px;align-items:center}
-.play{width:56px;height:56px;border-radius:50%;background:var(--emerald);color:var(--emerald-ink);font-size:22px;border:none;min-width:56px}
-.wave{display:flex;gap:2px;align-items:center;height:48px;flex:1}.wave i{width:4px;border-radius:2px;background:var(--wave-u);display:block}.wave i.p{background:var(--emerald)}
-.rec{width:72px;height:72px;border-radius:50%;background:var(--pink);border:none;color:#fff;font-size:26px}
+.play{width:56px;height:56px;border-radius:50%;background:var(--cyan);color:var(--cyan-ink);font-size:22px;border:none;min-width:56px}
+.wave{display:flex;gap:2px;align-items:center;height:48px;flex:1}.wave i{width:4px;border-radius:2px;background:var(--wave-u);display:block}.wave i.p{background:var(--cyan)}
+.rec{width:72px;height:72px;border-radius:50%;background:var(--orange);border:none;color:var(--orange-ink);font-size:26px;font-weight:800}
 .take{display:flex;gap:12px;align-items:center;background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:12px;margin-bottom:8px}
-.ab{display:flex;background:var(--bg1);border:1px solid var(--border);border-radius:8px;overflow:hidden;width:fit-content}.ab span{padding:8px 20px;font-size:14px;font-weight:700;color:var(--t3)}.ab .on{background:var(--emerald);color:var(--emerald-ink)}
-.ai{border-left:3px solid var(--purple);background:var(--s2);border-radius:0 12px 12px 0;padding:12px 16px;margin-bottom:8px}
+.ab{display:flex;background:var(--bg1);border:1px solid var(--border);border-radius:8px;overflow:hidden;width:fit-content}.ab span{padding:8px 20px;font-size:14px;font-weight:700;color:var(--t3)}.ab .on{background:var(--cyan);color:var(--cyan-ink)}
+.ai{border-left:3px solid var(--iris);background:var(--s2);border-radius:0 12px 12px 0;padding:12px 16px;margin-bottom:8px}
 .mono{font-family:Consolas,monospace;font-size:12px;color:var(--t2)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-.pillar{border:1px solid var(--border);border-radius:12px;padding:14px;background:var(--s1)}
-.pillar b{display:block;margin-bottom:6px}.pillar small{color:var(--t2)}
+.pillar{border:1px solid var(--border);border-radius:12px;padding:14px;background:var(--s1)}.pillar b{display:block;margin-bottom:6px}.pillar small{color:var(--t2)}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.step{font-size:12px;font-weight:700;padding:6px 10px;border-radius:8px;background:var(--bg1);border:1px solid var(--border);color:var(--t2)}.step.done{background:var(--cyan);color:var(--cyan-ink);border:none}.step.now{background:var(--lime);color:var(--lime-ink);border:none}
 </style>
 </head>
 <body>
 <h1>Muzik2Go — Design System</h1>
-<p class="sub">Emerald + Purple + Pink · flat fills only, no gradients · well-organised by feature</p>
+<p class="sub">Foil palette (flat, no gradients) · Cyan primary · Orange record · Iris AI · Lime spark · Chrome neutrals</p>
 
-<h2>A · Color roles (flat)</h2>
+<h2>A · Colors from image (flat)</h2>
 <div class="row">
-<div class="sw" style="background:#10B981;color:#06281E">Emerald — primary / go / progress</div>
-<div class="sw" style="background:#8B5CF6;color:#fff">Purple — AI / brand / creative</div>
-<div class="sw" style="background:#EC4899;color:#fff">Pink — record / favorite / attention</div>
-<div class="sw" style="background:#111722">bg + surfaces</div>
+<div class="sw" style="background:#0AC8FF;color:#062A3A">Cyan #0AC8FF — go/play</div>
+<div class="sw" style="background:#FF8A1A;color:#3A1E02">Orange #FF8A1A — record</div>
+<div class="sw" style="background:#C7CDD6;color:#121A26">Chrome #C7CDD6</div>
+<div class="sw" style="background:#C8F04A;color:#243000">Lime #C8F04A — spark</div>
+<div class="sw" style="background:#5B7CFF;color:#fff">Iris #5B7CFF — AI</div>
+<div class="sw" style="background:#1A2436">Slate bg</div>
 </div>
 <div class="card" style="margin-top:12px">
-<span class="role r-em">EMERALD: Play · Practice · Start · Selected · Progress · Improved</span>
-<span class="role r-pu">PURPLE: AI Coach · Analyze · Assistant · Brand</span>
-<span class="role r-pi">PINK: Record · Favorite · Live · Highlights</span>
-<p class="mono" style="margin-top:8px">Rules: 1 primary action per screen · AI always purple left-border + label · Record always pink circle · Never color-only, always label.</p>
+<span class="role r-cy">CYAN: Play · Practice · Selected · Improved</span>
+<span class="role r-ir">IRIS: AI Coach · Analyze · Assistant</span>
+<span class="role r-or">ORANGE: Record · Favorite · Live</span>
+<span class="role r-li">LIME: Streak · Active step · Highlights</span>
+<p class="mono" style="margin-top:8px">Rules: flat fills only · 1 primary per screen · AI always iris bar + label · Record always orange circle · Never color-only.</p>
 </div>
 
 <h2>B · Features — organised</h2>
 <div class="grid">
-<div class="pillar"><b>1 · VOICE</b><small>Practice · Vocal Coach · Voice Analysis · My Voice</small><div style="margin-top:8px"><span class="chip c-em">Practice</span> <span class="chip c-pu">Ask Coach</span></div></div>
-<div class="pillar"><b>2 · SONGS</b><small>Start a Song · Lyrics · Melody · Song Development · My Songs</small><div style="margin-top:8px"><span class="chip">Lyrics</span> <span class="chip">Structure</span></div></div>
-<div class="pillar"><b>3 · RECORD</b><small>Record · Takes · Harmonies · Ad-libs · Improve · Master</small><div style="margin-top:8px"><span class="chip c-pi">● Record</span> <span class="chip c-em">Take 4 selected</span></div></div>
-<div class="pillar"><b>4 · AI STUDIO</b><small>Assistant · Producer · Songwriter · Engineer · Playground · Session</small><div style="margin-top:8px"><span class="chip c-pu">✦ Coach</span> <span class="chip c-pu">✦ Producer</span></div></div>
-<div class="pillar"><b>5 · MUSIC</b><small>Instrumental · Work With Beat · Arrangement</small><div style="margin-top:8px"><span class="chip">Beat</span> <span class="chip">Arrangement</span></div></div>
-<div class="pillar"><b>6 · ARTIST</b><small>My Voice · My Sound · Journey · Portfolio</small><div style="margin-top:8px"><span class="chip c-em">Journey</span> <span class="chip">Portfolio</span></div></div>
-<div class="pillar"><b>7 · COMMUNITY</b><small>Learn · Collaborate · Feedback · Challenges</small><div style="margin-top:8px"><span class="chip">Learn</span> <span class="chip">Feedback</span></div></div>
+<div class="pillar"><b>1 · VOICE</b><small>Practice · Coach · Analysis · My Voice</small><div style="margin-top:8px"><span class="chip c-cy">Practice</span> <span class="chip c-ir">Ask Coach</span></div></div>
+<div class="pillar"><b>2 · SONGS</b><small>Start · Lyrics · Melody · Dev · My Songs</small><div style="margin-top:8px"><span class="chip">Lyrics</span> <span class="chip">Structure</span></div></div>
+<div class="pillar"><b>3 · RECORD</b><small>Record · Takes · Harmonies · Improve</small><div style="margin-top:8px"><span class="chip c-or">● Record</span> <span class="chip c-cy">Take 4</span></div></div>
+<div class="pillar"><b>4 · AI STUDIO</b><small>Assistant · Producer · Playground · Session</small><div style="margin-top:8px"><span class="chip c-ir">✦ Coach</span> <span class="chip c-ir">✦ Producer</span></div></div>
+<div class="pillar"><b>5 · MUSIC</b><small>Instrumental · Beat · Arrangement</small><div style="margin-top:8px"><span class="chip">Beat</span> <span class="chip">Arrange</span></div></div>
+<div class="pillar"><b>6 · ARTIST</b><small>Voice · Sound · Journey · Portfolio</small><div style="margin-top:8px"><span class="chip c-li">Journey</span> <span class="chip">Portfolio</span></div></div>
+<div class="pillar"><b>7 · COMMUNITY</b><small>Learn · Collab · Feedback</small><div style="margin-top:8px"><span class="chip">Learn</span> <span class="chip">Feedback</span></div></div>
 </div>
 
 <h2>C · Primitives</h2>
 <div class="card"><div class="row">
-<button class="btn b-em">Practice (emerald)</button><button class="btn b-pu">Ask Coach (purple)</button><button class="btn b-pi">● Record (pink)</button><button class="btn b-g">Ghost</button>
+<button class="btn b-cy">Practice (cyan)</button><button class="btn b-ir">Ask Coach (iris)</button><button class="btn b-or">● Record (orange)</button><button class="btn b-g">Ghost</button>
 </div><div class="row" style="margin-top:12px">
-<span class="chip c-em">Improved</span><span class="chip">Original</span><span class="chip c-pi">★ Favorite</span><span class="chip c-pu">✦ AI</span><span class="chip">Verse</span><span class="chip">Private</span>
+<span class="chip c-cy">Improved</span><span class="chip">Original</span><span class="chip c-or">★ Favorite</span><span class="chip c-ir">✦ AI</span><span class="chip c-li">Streak 4d</span>
 </div></div>
 
-<h2>D · Navigation</h2>
-<div class="nav"><div class="on">● HOME</div><div>● STUDIO</div><div>● SONGS</div><div>● JOURNEY</div><div>● COMMUNITY</div></div>
+<h2>D · Studio Session 6d (9 steps)</h2>
+<div class="card">
+<div class="steps">
+<span class="step done">1 Prepare</span><span class="step done">2 Warm up</span><span class="step now">3 Practice</span><span class="step">4 Record</span><span class="step">5 Analyze</span><span class="step">6 Try again</span><span class="step">7 Compare</span><span class="step">8 Develop</span><span class="step">9 Save</span>
+</div>
+<p class="mono" style="margin-top:8px">Exitable any step · Guide Me suggests next ("3 unfinished songs — continue My Love?") · Saves to Journey.</p>
+</div>
 
-<h2>E · Record flow (pink → emerald)</h2>
+<h2>E · Record + Player + Coach</h2>
 <div class="card row"><button class="rec">●</button><div><div class="mono" style="font-size:16px">00:32 · Verse</div><div style="color:var(--t2);font-size:13px">▂▅▃▇▅▂▇ capturing…</div></div></div>
-<div class="take"><b>♪</b><div style="flex:1"><b>Verse — Take 2</b><div class="mono">0:42 · favorite · pitch stable</div></div><span class="chip c-pi">★ fav</span><span class="chip">Compare</span></div>
-<div class="take"><b>♪</b><div style="flex:1"><b>Chorus — Take 4</b><div class="mono">0:38 · selected · -40c line 2</div></div><span class="chip c-em">selected</span></div>
+<div class="take"><b>♪</b><div style="flex:1"><b>Chorus — Take 4</b><div class="mono">0:38 · selected · -40c line 2</div></div><span class="chip c-cy">selected</span></div>
 <div class="row"><div class="ab"><span>Original</span><span class="on">Improved</span></div><span class="mono">Noise -8dB · <u>What changed?</u></span></div>
-
-<h2>F · Player + AI Coach</h2>
-<div class="player">
+<div class="player" style="margin-top:12px">
 <button class="play">▶</button>
 <div style="flex:1"><div style="font-weight:700">My Love — Chorus Take 4</div><div class="wave" id="w"></div><div class="mono">00:12.4 / 00:42</div></div>
-<button class="btn b-pu">Analyze</button><button class="btn b-em">Improve</button>
+<button class="btn b-ir">Analyze</button><button class="btn b-cy">Improve</button>
 </div>
-<div class="ai" style="margin-top:12px"><b style="color:var(--purple)">✦ Coach (purple)</b><p style="margin:6px 0">Your pitch was stable through most of the chorus. Final note of line 2 dropped slightly (-40 cents). Let's practice that transition.</p><div class="row"><button class="btn b-em" style="height:36px">Turn into Exercise</button><button class="btn b-g" style="height:36px">Keep original</button></div></div>
-
-<h2>G · Practice + Project + Progress</h2>
-<div class="grid">
-<div class="card"><b>Practice — Final note hold</b><div style="color:var(--t2);font-size:13px">Target: line 2 final · 5 min</div><div class="row" style="margin-top:8px"><button class="btn b-em" style="height:36px">Start</button><button class="btn b-pu" style="height:36px">Ask Coach</button></div></div>
-<div class="card"><b>My Love</b> <span class="chip c-em">demo</span><div class="mono" style="margin-top:6px">Idea → Takes → Analysis → Improved → Final</div><div style="color:var(--t2);font-size:13px">Chorus development · edited 2h ago</div></div>
-<div class="card"><b>Journey — this week</b><div class="mono">6 sessions · 3 records · streak 4d</div><div style="margin-top:8px;background:var(--bg1);border-radius:6px;height:8px"><div style="width:65%;height:8px;background:var(--emerald);border-radius:6px"></div></div></div>
-</div>
+<div class="ai" style="margin-top:12px"><b style="color:var(--iris)">✦ Coach</b><p style="margin:6px 0">Stable through the chorus. Final note of line 2 dropped slightly (-40 cents). Practice that transition.</p><div class="row"><button class="btn b-cy" style="height:36px">Turn into Exercise</button><button class="btn b-g" style="height:36px">Keep original</button></div></div>
 <script>const w=document.getElementById('w');for(let i=0;i<48;i++){const b=document.createElement('i');b.style.height=(8+Math.round(Math.random()*36))+'px';if(i<18)b.className='p';w.appendChild(b)}</script>
 </body>
 </html>
