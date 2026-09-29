@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Muzik2Go — Landing Flow Preview</title>
+<style>
+:root{--bg0:#121A26;--bg1:#1A2436;--s1:#222E44;--s2:#2A3850;--bd:#3A4A66;--t1:#F2F5F9;--t2:#C7CDD6;--t3:#8A94A8;--cyan:#0AC8FF;--cy-ink:#062A3A;--orange:#FF8A1A;--or-ink:#3A1E02;--lime:#C8F04A;--li-ink:#243000;--iris:#5B7CFF}
+*{box-sizing:border-box;margin:0}body{background:var(--bg0);color:var(--t1);font-family:Inter,Segoe UI,system-ui,sans-serif}
+.wrap{max-width:1000px;margin:auto;padding:24px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid var(--bd)}
+.cta{background:var(--cyan);color:var(--cy-ink);padding:10px 20px;border-radius:8px;font-weight:800;text-decoration:none;display:inline-block}
+.hero{text-align:center;padding:64px 24px}
+.hero h1{font-size:54px;line-height:1.05}.hero p{color:var(--t2);font-size:19px;margin-top:12px}
+.big{background:var(--cyan);color:var(--cy-ink);padding:16px 36px;border-radius:12px;font-weight:800;font-size:18px;text-decoration:none;display:inline-block;margin-top:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;padding:0 24px 48px;max-width:1000px;margin:auto}
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:20px}
+.screen{background:var(--s1);border:1px solid var(--bd);border-radius:16px;padding:28px;max-width:440px;margin:24px auto}
+input{width:100%;height:48px;border-radius:8px;border:1px solid var(--bd);background:var(--bg1);color:var(--t1);padding:0 14px;margin-top:8px}
+.btn{width:100%;height:52px;border-radius:12px;border:none;font-weight:800;font-size:16px;margin-top:16px}
+.page-label{font-size:12px;font-weight:800;color:var(--t3);letter-spacing:.08em;text-transform:uppercase}
+.tabs{display:flex;gap:8px;padding:16px;border-bottom:1px solid var(--bd);flex-wrap:wrap}.tab{padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700;background:var(--s1);color:var(--t2)}.tab.on{background:var(--cyan);color:var(--cy-ink)}
+</style>
+</head>
+<body>
+<div class="nav"><b>Muzik2Go</b><a class="cta" href="#start">Start your creation</a></div>
+
+<div class="wrap"><span class="page-label">/ — Landing (first seen)</span></div>
+<div class="hero">
+<span style="background:var(--iris);color:#fff;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700">AI STUDIO · VOICE · SONGS · RECORD</span>
+<h1>Your Studio,<br>Anywhere.</h1>
+<p>Bring whatever you have — a hum, a lyric, a beat, a rough demo.<br>Muzik2Go helps you practice, record, analyze and finish it.</p>
+<a class="big" href="#start">Start your creation</a>
+<p style="color:var(--t3);font-size:13px;margin-top:12px">Free to start · Private by default · No studio needed</p>
+</div>
+<div class="grid">
+<div class="card"><b>Practice</b><p style="color:var(--t2);font-size:14px;margin-top:6px">Warm-ups + AI vocal coach that explains, never just scores.</p></div>
+<div class="card"><b>Record</b><p style="color:var(--t2);font-size:14px;margin-top:6px">Acapella or over your beat. Takes kept, never overwritten.</p></div>
+<div class="card"><b>Analyze</b><p style="color:var(--t2);font-size:14px;margin-top:6px">Pitch + timing in plain language with 1-tap fix.</p></div>
+<div class="card"><b>Finish</b><p style="color:var(--t2);font-size:14px;margin-top:6px">Polish, Original vs Improved A/B, export WAV/MP3.</p></div>
+</div>
+
+<div class="wrap" id="start"><span class="page-label">/start — Email gate</span>
+<div class="screen">
+<b>Muzik2Go</b>
+<h2 style="font-size:26px;margin:8px 0">Start your creation</h2>
+<p style="color:var(--t2)">Put in your email to open your studio.</p>
+<label style="font-size:13px;display:block;margin-top:16px">Email</label>
+<input type="email" placeholder="you@studio.com">
+<button class="btn" style="background:var(--cyan);color:var(--cy-ink)">Continue →</button>
+<div style="margin-top:16px;border-top:1px solid var(--bd);padding-top:16px">
+<p style="color:var(--t2);font-size:14px">New here — finish your account:</p>
+<label style="font-size:13px;display:block;margin-top:12px">Display name</label>
+<input placeholder="Stella">
+<label style="font-size:13px;display:block;margin-top:12px">Password</label>
+<input type="password" placeholder="••••••••">
+<button class="btn" style="background:var(--lime);color:var(--li-ink)">Create account & open studio →</button>
+</div>
+<p style="color:var(--t3);font-size:12px;margin-top:12px">Exists → opens studio · New → more fields → studio</p>
+</div></div>
+
+<div class="wrap"><span class="page-label">/studio — Opened after gate</span></div>
+<div style="border-top:1px solid var(--bd)">
+<div class="tabs"><span class="tab">HOME</span><span class="tab on">STUDIO</span><span class="tab">SONGS</span><span class="tab">JOURNEY</span><span class="tab">COMMUNITY</span></div>
+<div class="wrap"><h2 style="font-size:30px">Welcome to your studio.</h2>
+<p style="color:var(--t2)">Continue: My Love — Chorus development →</p>
+<div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
+<span class="cta">Practice</span>
+<span class="cta" style="background:var(--orange);color:var(--or-ink)">● Record</span>
+<span class="cta" style="background:var(--iris);color:#fff">✦ Ask Coach</span>
+</div></div>
+</div>
+</body>
+</html>
