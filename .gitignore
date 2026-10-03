@@ -20,6 +20,11 @@ Thumbs.db
 *.m4a
 uploads/
 
+# Dev logs
+dev-out.log
+dev-err.log
+dev.log
+
 # Python
 __pycache__/
 .venv/
