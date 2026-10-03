@@ -1,0 +1,56 @@
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+Installing dependencies
+
+If you are not trying to use TypeScript, please remove the tsconfig.json file from your package root (and any TypeScript files in your pages directory).
+
+
+Installing devDependencies (pnpm):
+- typescript
+- @types/react
+- @types/node
+
+✓ Lockfile passes supply-chain policies (verified 6m ago)
+Progress: resolved 0, reused 1, downloaded 0, added 0
+Downloading @typescript/typescript-win32-x64@7.0.2: 0.00 B/9.77 MB
+Downloading @typescript/typescript-win32-x64@7.0.2: 802.81 kB/9.77 MB
+Downloading @typescript/typescript-win32-x64@7.0.2: 2.17 MB/9.77 MB
+Downloading @typescript/typescript-win32-x64@7.0.2: 3.85 MB/9.77 MB
+Downloading @typescript/typescript-win32-x64@7.0.2: 6.16 MB/9.77 MB
+Downloading @typescript/typescript-win32-x64@7.0.2: 9.30 MB/9.77 MB
+Progress: resolved 0, reused 28, downloaded 2, added 0
+Progress: resolved 0, reused 30, downloaded 2, added 0
+Progress: resolved 0, reused 31, downloaded 2, added 0
+Progress: resolved 0, reused 33, downloaded 2, added 0
+Progress: resolved 0, reused 33, downloaded 3, added 0
+Progress: resolved 0, reused 34, downloaded 3, added 0
+Progress: resolved 0, reused 35, downloaded 3, added 0
+Progress: resolved 0, reused 36, downloaded 6, added 0
+Progress: resolved 0, reused 37, downloaded 6, added 0
+Progress: resolved 0, reused 38, downloaded 6, added 0
+Progress: resolved 5, reused 38, downloaded 6, added 4
+Progress: resolved 5, reused 38, downloaded 6, added 5
+Progress: resolved 9, reused 38, downloaded 6, added 7
+Progress: resolved 9, reused 38, downloaded 6, added 8
+Progress: resolved 9, reused 38, downloaded 6, added 9
+Packages: +9 -3
++++++++++---
+Progress: resolved 9, reused 38, downloaded 6, added 9, done
+[WARN] Issues with peer dependencies found. Run "pnpm peers check" to list them.
+
+devDependencies:
++ @types/node 26.6.4
++ @types/react 19.3.0
++ typescript 7.0.2
+
+Done in 2m 54.1s using pnpm v12.8.1
+
+[?25h
