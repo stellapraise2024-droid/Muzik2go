@@ -25,6 +25,9 @@ dev-out.log
 dev-err.log
 dev.log
 
+# Vercel
+.vercel/
+
 # Python
 __pycache__/
 .venv/
