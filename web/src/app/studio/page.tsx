@@ -1,20 +1,27 @@
-// /studio — opened after email exists OR account created. 5 tabs per IA.
+import SiteNav from "@/components/SiteNav";
+
+// /studio — working environment: Practice / Record / Develop / Improve sections, all navigable.
+const SECTIONS = [
+  { title: "Practice", desc: "Warm-ups + guided exercises + Ask Coach", bg: "#0AC8FF", fg: "#062A3A" },
+  { title: "● Record", desc: "Acapella or over your beat · takes kept", bg: "#FF8A1A", fg: "#3A1E02" },
+  { title: "Develop", desc: "Lyrics + structure + arrangement ideas", bg: "#222E44", fg: "#F2F5F9" },
+  { title: "✦ Improve", desc: "Analyze → Polish → Original vs Improved", bg: "#5B7CFF", fg: "#fff" },
+];
+
 export default function Studio() {
-  const tabs = ["HOME", "STUDIO", "SONGS", "JOURNEY", "COMMUNITY"];
   return (
     <main style={{ background: "#121A26", color: "#F2F5F9", minHeight: "100vh", fontFamily: "Inter,system-ui" }}>
-      <nav style={{ display: "flex", gap: 8, padding: 16, borderBottom: "1px solid #3A4A66" }}>
-        {tabs.map((t, i) => (
-          <span key={t} style={{ padding: "8px 14px", borderRadius: 999, fontSize: 13, fontWeight: 700, background: i === 1 ? "#0AC8FF" : "#222E44", color: i === 1 ? "#062A3A" : "#C7CDD6" }}>{t}</span>
-        ))}
-      </nav>
-      <section style={{ padding: 32, maxWidth: 800, margin: "auto" }}>
+      <SiteNav active="/studio" />
+      <section style={{ padding: 32, maxWidth: 900, margin: "auto" }}>
         <h1 style={{ fontSize: 32 }}>Welcome to your studio.</h1>
-        <p style={{ color: "#C7CDD6" }}>Continue: My Love — Chorus development →</p>
-        <div style={{ display: "flex", gap: 12, marginTop: 20, flexWrap: "wrap" }}>
-          <a href="#" style={{ background: "#0AC8FF", color: "#062A3A", padding: "14px 24px", borderRadius: 12, fontWeight: 800, textDecoration: "none" }}>Practice</a>
-          <a href="#" style={{ background: "#FF8A1A", color: "#3A1E02", padding: "14px 24px", borderRadius: 12, fontWeight: 800, textDecoration: "none" }}>● Record</a>
-          <a href="#" style={{ background: "#5B7CFF", color: "#fff", padding: "14px 24px", borderRadius: 12, fontWeight: 800, textDecoration: "none" }}>✦ Ask Coach</a>
+        <p style={{ color: "#C7CDD6" }}>Continue: <a href="/songs" style={{ color: "#0AC8FF" }}>My Love — Chorus development →</a></p>
+        <div style={{ marginTop: 20, display: "grid", gap: 12 }}>
+          {SECTIONS.map((s) => (
+            <div key={s.title} style={{ background: "#222E44", border: "1px solid #3A4A66", borderRadius: 12, padding: 20 }}>
+              <span style={{ background: s.bg, color: s.fg, padding: "6px 14px", borderRadius: 8, fontWeight: 800 }}>{s.title}</span>
+              <p style={{ color: "#C7CDD6", fontSize: 14, marginTop: 8 }}>{s.desc} — in beta via mobile + API</p>
+            </div>
+          ))}
         </div>
       </section>
     </main>
