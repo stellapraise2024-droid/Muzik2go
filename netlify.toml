@@ -1,0 +1,11 @@
+# Netlify — Muzik2Go web (Next.js 14, base: web/)
+[build]
+  base = "web/"
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
