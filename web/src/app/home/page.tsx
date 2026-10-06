@@ -21,12 +21,12 @@ export default function Home() {
         </div>
         <h2 style={{ marginTop: 32, fontSize: 20 }}>Continue working</h2>
         <a href="/songs" style={{ display: "block", marginTop: 12, background: "#222E44", border: "1px solid #3A4A66", borderRadius: 12, padding: 20, color: "#F2F5F9", textDecoration: "none" }}>
-          <b>My Love</b> <span style={{ background: "#0AC8FF", color: "#062A3A", borderRadius: 999, padding: "2px 10px", fontSize: 12, fontWeight: 700 }}>demo</span>
-          <p style={{ color: "#C7CDD6", fontSize: 14 }}>Chorus development · edited 2h ago →</p>
+          <b>My Songs →</b>
+          <p style={{ color: "#C7CDD6", fontSize: 14 }}>No songs yet.</p>
         </a>
         <h2 style={{ marginTop: 32, fontSize: 20 }}>Your progress</h2>
         <a href="/journey" style={{ display: "block", marginTop: 12, background: "#222E44", border: "1px solid #3A4A66", borderRadius: 12, padding: 20, color: "#F2F5F9", textDecoration: "none" }}>
-          <p style={{ fontFamily: "monospace", fontSize: 13 }}>6 sessions · 3 records · streak 4 days →</p>
+          <p style={{ color: "#C7CDD6", fontSize: 14 }}>Your Journey →</p>
         </a>
       </section>
     </main>
