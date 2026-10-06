@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Muzik2Go",
+    "slug": "muzik2go",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "primaryColor": "#0AC8FF",
+    "android": {
+      "package": "com.muzik2go.app",
+      "versionCode": 1,
+      "permissions": ["INTERNET", "RECORD_AUDIO", "MODIFY_AUDIO_SETTINGS"]
+    }
+  }
+}
