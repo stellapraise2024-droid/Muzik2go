@@ -1,5 +1,6 @@
 # Deps
 node_modules/
+node_modules.dead/
 .expo/
 .next/
 dist/

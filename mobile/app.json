@@ -8,7 +8,16 @@
     "android": {
       "package": "com.muzik2go.app",
       "versionCode": 1,
-      "permissions": ["INTERNET", "RECORD_AUDIO", "MODIFY_AUDIO_SETTINGS"]
+      "permissions": [
+        "INTERNET",
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "78ad3eda-df64-4942-962c-bf166db76f8c"
+      }
     }
   }
 }
