@@ -1,20 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
+import { desc, eq } from "drizzle-orm";
 import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
+import { songProjects } from "@/lib/schema";
 
 // GET /api/projects — list own projects (Private by default)
-// POST /api/projects {title, lyricsText?, structure?} — create
 export async function GET(req: NextRequest) {
   const session = await auth.api.getSession({ headers: req.headers });
   if (!session) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  // TODO Phase 1: drizzle select * from song_projects where ownerId = session.user.id order by created_at desc
-  return NextResponse.json({ projects: [], note: "wire drizzle + DATABASE_URL in Phase 1 install" });
+  const projects = await db
+    .select()
+    .from(songProjects)
+    .where(eq(songProjects.ownerId, session.user.id))
+    .orderBy(desc(songProjects.createdAt));
+  return NextResponse.json({ projects });
 }
 
+// POST /api/projects {title, lyricsText?, structure?} — create (private, idea)
 export async function POST(req: NextRequest) {
   const session = await auth.api.getSession({ headers: req.headers });
   if (!session) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const body = await req.json();
   if (!body?.title) return NextResponse.json({ error: "title required" }, { status: 400 });
-  // TODO: insert with visibility=private, status=idea
-  return NextResponse.json({ ok: true, stub: body });
+  const [project] = await db
+    .insert(songProjects)
+    .values({
+      ownerId: session.user.id,
+      title: String(body.title),
+      lyricsText: body.lyricsText ? String(body.lyricsText) : "",
+      structure: Array.isArray(body.structure) ? body.structure : [],
+      status: "idea",
+      visibility: "private",
+    })
+    .returning();
+  return NextResponse.json({ project });
 }
