@@ -24,8 +24,8 @@ importers:
         specifier: 0.74.5
         version: 0.74.5(@babel/core@7.29.7(supports-color@8.1.1))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(react@18.2.0)(supports-color@8.1.1)
       react-native-webview:
-        specifier: 14.0.1
-        version: 14.0.1(react-native@0.74.5(@babel/core@7.29.7(supports-color@8.1.1))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(react@18.2.0)(supports-color@8.1.1))(react@18.2.0)
+        specifier: 13.8.6
+        version: 13.8.6(react-native@0.74.5(@babel/core@7.29.7(supports-color@8.1.1))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(react@18.2.0)(supports-color@8.1.1))(react@18.2.0)
 
 packages:
 
@@ -3090,8 +3090,8 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-native-webview@14.0.1:
-    resolution: {integrity: sha512-lBUuvFk459Mo+5vUNqwzGvn+I8rDJE6zvOulG2hWWudeEOJfWTsQwOfuYnRu+27djUIXrESFfC+EQE3PGu+FWA==}
+  react-native-webview@13.8.6:
+    resolution: {integrity: sha512-jtZ9OgB2AN6rhDwto6dNL3PtOtl/SI4VN93pZEPbMLvRjqHfxiUrilGllL5fKAXq5Ry5FJyfUi82A4Ii8olZ7A==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -7838,9 +7838,9 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-native-webview@14.0.1(react-native@0.74.5(@babel/core@7.29.7(supports-color@8.1.1))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(react@18.2.0)(supports-color@8.1.1))(react@18.2.0):
+  react-native-webview@13.8.6(react-native@0.74.5(@babel/core@7.29.7(supports-color@8.1.1))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(react@18.2.0)(supports-color@8.1.1))(react@18.2.0):
     dependencies:
-      escape-string-regexp: 4.0.0
+      escape-string-regexp: 2.0.0
       invariant: 2.2.4
       react: 18.2.0
       react-native: 0.74.5(@babel/core@7.29.7(supports-color@8.1.1))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(react@18.2.0)(supports-color@8.1.1)
