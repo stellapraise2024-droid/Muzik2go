@@ -26,6 +26,10 @@ dev-out.log
 dev-err.log
 dev.log
 
+# Build outputs (distributed via EAS link + local file, not git)
+*.apk
+dist-android/
+
 # Vercel
 .vercel/
 
