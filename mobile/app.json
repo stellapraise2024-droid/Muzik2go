@@ -5,6 +5,8 @@
     "version": "0.1.0",
     "orientation": "portrait",
     "primaryColor": "#0AC8FF",
+    "backgroundColor": "#121A26",
+    "splash": { "backgroundColor": "#121A26" },
     "android": {
       "package": "com.muzik2go.app",
       "versionCode": 1,
