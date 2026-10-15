@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import SiteNav from "@/components/SiteNav";
 import { loadSongs, updateSong, type Song } from "@/lib/songs";
 
-// /studio/develop — edit a song's lyrics + structure, saved on device.
 export default function Develop({ searchParams }: { searchParams: { song?: string } }) {
   const [songs, setSongs] = useState<Song[]>([]);
   const [songId, setSongId] = useState(searchParams.song ?? "");
@@ -31,9 +30,9 @@ export default function Develop({ searchParams }: { searchParams: { song?: strin
     setSections((s?.sections ?? []).join("\n"));
   }
 
-  function save() {
+  async function save() {
     if (!songId) return;
-    const ok = updateSong(songId, { lyrics, sections: sections.split("\n").map((x) => x.trim()).filter(Boolean) });
+    const ok = await updateSong(songId, { lyrics, sections: sections.split("\n").map((x) => x.trim()).filter(Boolean) });
     if (ok) {
       setSongs(loadSongs());
       setSavedAt(Date.now());
