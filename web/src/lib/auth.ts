@@ -1,7 +1,6 @@
 import { betterAuth } from "better-auth";
 import { Pool } from "pg";
 
-// Email/password + OAuth where configured. Postgres via DATABASE_URL.
 const socialProviders: Record<string, { clientId: string; clientSecret: string }> = {};
 if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
   socialProviders.google = { clientId: process.env.GOOGLE_CLIENT_ID, clientSecret: process.env.GOOGLE_CLIENT_SECRET };
@@ -15,4 +14,6 @@ export const auth = betterAuth({
   emailAndPassword: { enabled: true },
   socialProviders,
   session: { expiresIn: 60 * 60 * 24 * 30 },
+  secret: process.env.BETTER_AUTH_SECRET || "m2g-demo-secret-32-chars-minimum",
+  baseURL: process.env.BETTER_AUTH_URL || "https://muzik2go-164.netlify.app",
 });
