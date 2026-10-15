@@ -10,7 +10,6 @@ const ACTIONS = [
   { href: "improve", label: "✦ Improve", bg: "#5B7CFF", fg: "#fff" },
 ];
 
-// /songs/[id] — one song: what to do with it.
 export default function SongDetail({ params }: { params: { id: string } }) {
   const [song, setSong] = useState<Song | null | undefined>(undefined);
 
@@ -41,7 +40,7 @@ export default function SongDetail({ params }: { params: { id: string } }) {
           ))}
         </div>
         <button
-          onClick={() => { if (window.confirm(`Delete “${song.title}”?`)) { deleteSong(song.id); window.location.href = "/songs"; } }}
+          onClick={async () => { if (window.confirm(`Delete "${song.title}"?`)) { await deleteSong(song.id); window.location.href = "/songs"; } }}
           style={{ marginTop: 32, background: "transparent", border: "1px solid #3A4A66", color: "#C7CDD6", borderRadius: 8, padding: "10px 18px" }}
         >
           Delete song
