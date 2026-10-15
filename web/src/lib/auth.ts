@@ -23,5 +23,5 @@ export const auth = betterAuth({
   socialProviders,
   session: { expiresIn: 60 * 60 * 24 * 30 },
   secret,
-  baseURL: process.env.BETTER_AUTH_URL || "https://muzik2go-164.netlify.app",
+  baseURL: process.env.BETTER_AUTH_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
 });
