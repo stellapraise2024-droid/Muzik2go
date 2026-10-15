@@ -1,0 +1,38 @@
+:root {
+  --bg-0: #0A0A12;
+  --bg-1: #12121C;
+  --surface-1: #1A1A26;
+  --surface-2: #222233;
+  --border: #2E2E42;
+  --text-1: #F5F5FA;
+  --text-2: #B8B8CC;
+  --text-3: #7E7E96;
+  --brand: #7C5CFF;
+  --teal: #00E5CC;
+  --record: #FF3B5C;
+  --success: #30D158;
+  --warning: #FFB020;
+  --error: #FF453A;
+  --cyan: #0AC8FF;
+  --orange: #FF8A1A;
+  --purple: #5B7CFF;
+  --lime: #C8F04A;
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 48px;
+  --space-9: 64px;
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
