@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 
-// /start — email gate: email → password → open studio.
-// Existing account signs in; otherwise name appears and the account is created.
 export default function Start() {
   const [step, setStep] = useState<"email" | "password" | "signup">("email");
   const [email, setEmail] = useState("");
@@ -11,12 +9,6 @@ export default function Start() {
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
   const [busy, setBusy] = useState(false);
-
-  function friendly(err: unknown): string {
-    const m = err instanceof Error ? err.message : String(err);
-    if (/invalid email or password/i.test(m)) return "wrong-password";
-    return m || "Something went wrong. Try again.";
-  }
 
   async function submitEmail(e: React.FormEvent) {
     e.preventDefault();
@@ -35,12 +27,13 @@ export default function Start() {
       window.location.href = "/studio";
       return;
     }
-    if (friendly(error) === "wrong-password") {
+    const message = error.message || String(error);
+    if (/invalid|wrong|incorrect/i.test(message)) {
       setStep("signup");
       setMsg("No account with that password — finish creating yours below.");
       return;
     }
-    setMsg(friendly(error));
+    setMsg(`Error: ${message}`);
   }
 
   async function signUp(e: React.FormEvent) {
@@ -53,7 +46,7 @@ export default function Start() {
       window.location.href = "/studio";
       return;
     }
-    setMsg(friendly(error));
+    setMsg(`Error: ${error.message || String(error)}`);
   }
 
   const box: React.CSSProperties = { background: "#121A26", color: "#F2F5F9", minHeight: "100vh", fontFamily: "Inter,system-ui", display: "grid", placeItems: "center", padding: 24 };
@@ -86,7 +79,7 @@ export default function Start() {
             <button disabled={busy} style={{ ...btn, background: "#C8F04A", color: "#243000" }}>{busy ? "Creating…" : "Create account & open studio →"}</button>
           </form>
         )}
-        {msg && <p style={{ color: "#8A94A8", fontSize: 12, marginTop: 12 }}>{msg}</p>}
+        {msg && <p style={{ color: msg.startsWith("Error:") ? "#FF453A" : "#8A94A8", fontSize: 13, marginTop: 12, lineHeight: 1.5 }}>{msg}</p>}
         <a href="/" style={{ color: "#C7CDD6", fontSize: 13 }}>← Back</a>
       </div>
     </main>
