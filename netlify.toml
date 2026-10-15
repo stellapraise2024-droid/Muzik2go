@@ -2,7 +2,7 @@
 [build]
   base = "web/"
   command = "pnpm build"
-  publish = "web/.next"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
