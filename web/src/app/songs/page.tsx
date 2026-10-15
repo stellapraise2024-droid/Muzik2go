@@ -1,19 +1,21 @@
 "use client";
 import { useEffect, useState } from "react";
 import SiteNav from "@/components/SiteNav";
-import { loadSongs, createSong, type Song } from "@/lib/songs";
+import { loadSongs, loadSongsFromApi, createSong, type Song } from "@/lib/songs";
 
-// /songs — real list from device storage + create. Tap a song to open it.
 export default function Songs() {
   const [songs, setSongs] = useState<Song[]>([]);
   const [title, setTitle] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => setSongs(loadSongs()), []);
+  useEffect(() => {
+    loadSongsFromApi().then((s) => { setSongs(s); setLoading(false); });
+  }, []);
 
-  function start() {
+  async function start() {
     setError("");
-    const song = createSong(title);
+    const song = await createSong(title);
     if (!song) {
       setError(title.trim() ? "Could not save. Storage may be full." : "Give your song a title first.");
       return;
@@ -36,7 +38,9 @@ export default function Songs() {
           <button onClick={start} style={{ height: 48, padding: "0 24px", borderRadius: 12, border: "none", background: "#0AC8FF", color: "#062A3A", fontWeight: 800 }}>+ Start a song</button>
         </div>
         {error && <p style={{ color: "#FF8A1A", marginTop: 8 }}>{error}</p>}
-        {songs.length === 0 ? (
+        {loading ? (
+          <p style={{ color: "#C7CDD6", marginTop: 20 }}>Loading…</p>
+        ) : songs.length === 0 ? (
           <p style={{ color: "#C7CDD6", marginTop: 20 }}>No songs yet.</p>
         ) : (
           <div style={{ marginTop: 20, display: "grid", gap: 12 }}>
